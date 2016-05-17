@@ -18,6 +18,14 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
+<<<<<<< HEAD
+=======
+    ENV.git = {
+      repo: 'https://github.com/joiv/joiv.github.io.git',
+      branch: 'gh-pages',
+      worktreePath: '/tmp/deploy'
+    };
+>>>>>>> gh-pages
     // configure other plugins for production deploy target here
   }
 

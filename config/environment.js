@@ -53,6 +53,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+<<<<<<< HEAD
+=======
+    ENV.baseURL = '/joiv.github.io';
+    ENV.locationType = 'hash';
+>>>>>>> gh-pages
 
   }
 
