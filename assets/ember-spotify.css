@@ -1,0 +1,30 @@
+body > .ember-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2em;
+}
+
+#topbar {
+  flex-shrink: 0;
+}
+
+#content {
+  display: flex;
+  flex: 1 0;
+}
+#content > .ui.grid {
+  display: flex;
+  flex: 1;
+}
+#content > .ui.grid > .column {
+  overflow: auto;
+  flex: 0 1 auto;
+}
+
+#playbar {
+  flex-shrink: 0;
+}
+#playbar > .ui.form > .inline.fields {
+  margin: 0;
+}
