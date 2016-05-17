@@ -53,12 +53,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-<<<<<<< HEAD
-=======
-    ENV.baseURL = '/joiv.github.io';
+    ENV.baseURL = '/emberspotify';
     ENV.locationType = 'hash';
->>>>>>> gh-pages
-
   }
 
   return ENV;
