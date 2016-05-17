@@ -1,0 +1,55 @@
+  <div class="ui top attached menu" id="topbar">
+    <div class="header item">
+      <i class="spotify large icon"/> ember-spotify
+    </div>
+    <div class="right menu">
+      <div class="item">
+        <form {{action 'search' on='submit'}}>
+          <div class="ui icon input">
+            <i class="search icon"></i>
+            {{input placeholder='Search...' value=query}}
+          </div>
+        </form>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="{{session.currentUser.avatar}}">
+        {{session.currentUser.displayName}}
+      </div>
+
+    </div>
+  </div>
+  <div class="ui attached segment" id="content">
+    <div class="ui divided grid">
+      <div class="four wide column">
+
+        <div class="ui fluid vertical text menu">
+          {{#each session.currentUser.playlists as |playlist|}}
+            {{link-to playlist.name 'playlist' playlist.owner.id playlist.id class='item'}}
+          {{/each}}
+        </div>
+
+      </div>
+      <div class="twelve wide column">
+
+        {{outlet}}
+
+      </div>
+    </div>
+  </div>
+  <div class="ui bottom attached segment" id="playbar">
+    <div class="ui form">
+      <div class="inline fields">
+
+        <div class="field">
+          <button class="ui mini icon button" {{action 'toggle'}}>
+            <i class="{{if player.isPlaying 'pause' 'play'}} icon"/>
+          </button>
+        </div>
+
+        <div class="field">
+        <em> {{player.track.name}}</em>
+        </div>
+
+      </div>
+    </div>
+  </div>
