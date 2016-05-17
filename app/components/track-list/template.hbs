@@ -1,0 +1,28 @@
+<table class="ui very basic table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Album</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracks as |track|}}
+      <tr>
+        <td>
+           <button class="ui tiny icon button" {{action 'play' track}}>
+          		<i class="{{if (and (eq track player.track) player.isPlaying) 'pause' 'play'}} icon"/>
+          </button>
+        </td>
+        <td>{{track.name}}</td>
+        <td>
+          {{#each track.artists as |artist|}}
+            {{artist.name}}
+          {{/each}}
+        </td>
+        <td>{{link-to track.album.name 'album' track.album.id}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

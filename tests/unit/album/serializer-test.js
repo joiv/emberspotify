@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('spotify', 'Unit | Serializer | spotify', {
+moduleForModel('album', 'Unit | Serializer | album', {
   // Specify the other units that are required for this test.
-  needs: ['serializer:spotify']
+  needs: ['serializer:album']
 });
 
 // Replace this with your real tests.

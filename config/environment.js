@@ -16,7 +16,20 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'spotify': {
+          apiKey: '2ae47642fb2841ad9baf7d3561f60438',
+          redirectUri: 'http://localhost:4200/oauth2-callback',
+          showDialog: true,
+          scope: 'playlist-read-collaborative playlist-read-private user-library-read'
+        }
+      }
     }
+
   };
 
   if (environment === 'development') {
