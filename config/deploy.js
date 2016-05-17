@@ -19,7 +19,7 @@ module.exports = function(deployTarget) {
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
     ENV.git = {
-      repo: 'git@github.com:joiv/joiv.github.io.git'
+      repo: 'https://github.com/joiv/joiv.github.io.git'
     };
     // configure other plugins for production deploy target here
   }
