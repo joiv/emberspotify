@@ -53,6 +53,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.baseURL = '/joiv.github.io';
+    ENV.locationType = 'hash';
 
   }
 
