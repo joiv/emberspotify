@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:token', 'Unit | Service | token', {
+moduleFor('service:player', 'Unit | Service | player', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });

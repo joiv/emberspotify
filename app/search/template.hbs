@@ -1,0 +1,7 @@
+<h3 class="ui header">Search Results</h3>
+
+{{#if model.tracks}}
+  {{track-list tracks=model.tracks}}
+{{else}}
+  <div class="ui info message">No tracks matching your search!</div>
+{{/if}}
